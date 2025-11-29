@@ -1,0 +1,78 @@
+# --------------------------
+# Python
+# --------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.ps
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# Jupyter Notebook cache
+.ipynb_checkpoints/
+
+# Matplotlib cache
+.matplotlib/
+
+# Temporary files
+*.tmp
+*.log
+
+# --------------------------
+# OS / Editor files
+# --------------------------
+
+# Linux / WSL
+*~
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Windows ADS (metadata that appears in WSL)
+*:Zone.Identifier
+
+# macOS (just in case)
+.DS_Store
+.AppleDouble
+```
+
+---
+
+# 🔍 **Optional rules (add if you want)**
+
+### ❗ Ignore large data files if needed
+If you want to avoid committing raw data such as `.txt` files:
+
+```
+assignment1/data/*.txt
+```
+
+### ❗ Ignore generated plots  
+If you generate many plots and don’t want them in the repo:
+
+```
+assignment1/plots/
+```
+
+### ❗ Ignore Python IDEs  
+If you use PyCharm:
+
+```
+.idea/
+```
+
+---
