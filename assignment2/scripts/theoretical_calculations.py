@@ -76,7 +76,7 @@ r_gps_apogee = a_gps * (1 + e_gps)   # Farthest point
 # Geometry for LEO-GPS ranging
 # Minimum range: GPS at zenith (directly above LEO)
 # Use apogee distance for worst case
-rho_min = r_gps_perigee - r_leo  # [km]
+rho_min = r_gps_apogee - r_leo  # [km]
 
 # Maximum range: GPS at horizon (tangent to LEO orbit)
 # Geometric distance from LEO to horizon + GPS to horizon
@@ -127,12 +127,12 @@ print(f"  τ_min = {rho_min:.3f} / {c} = {tau_min*1e3:.6f} ms")
 print(f"  τ_max = {rho_max:.3f} / {c} = {tau_max*1e3:.6f} ms")
 print(f"\nSagnac Correction (ω_e × τ × r):")
 print(f"  Δρ_sagnac_min ≈ {omega_e:.6e} × {tau_min:.6f} × {r_leo:.3f}")
-print(f"  Δρ_sagnac_min ≈ {Delta_rho_sagnac_min*1e6:.3f} m")
+print(f"  Δρ_sagnac_min ≈ {Delta_rho_sagnac_min*1e3:.3f} m")
 print(f"\n  Δρ_sagnac_max ≈ {omega_e:.6e} × {tau_max:.6f} × {r_gps_apogee:.3f}")
-print(f"  Δρ_sagnac_max ≈ {Delta_rho_sagnac_max*1e6:.3f} m")
+print(f"  Δρ_sagnac_max ≈ {Delta_rho_sagnac_max*1e3:.3f} m")
 print(f"\n>>> ANSWER:")
-print(f"    Minimum Sagnac effect: {Delta_rho_sagnac_min*1e6:.3f} m")
-print(f"    Maximum Sagnac effect: {Delta_rho_sagnac_max*1e6:.3f} m")
+print(f"    Minimum Sagnac effect: {Delta_rho_sagnac_min*1e3:.3f} m")
+print(f"    Maximum Sagnac effect: {Delta_rho_sagnac_max*1e3:.3f} m")
 
 # ============================================================================
 # QUESTION 3: RELATIVISTIC EFFECT (ECCENTRICITY)
@@ -190,10 +190,10 @@ print(f"  δt_rel_max = {delta_t_rel_max:.6e} s = {delta_t_rel_max*1e9:.3f} ns")
 print(f"\nRange Error:")
 print(f"  Δρ_rel = c × δt_rel")
 print(f"  Δρ_rel_max = {c} × {delta_t_rel_max:.6e}")
-print(f"  Δρ_rel_max = {Delta_rho_rel_max*1e6:.6f} m")
+print(f"  Δρ_rel_max = {Delta_rho_rel_max*1e3:.6f} m")
 print(f"\n>>> ANSWER:")
 print(f"    Minimum relativistic effect: {Delta_rho_rel_min} m")
-print(f"    Maximum relativistic effect: {Delta_rho_rel_max*1e6:.6f} m")
+print(f"    Maximum relativistic effect: {Delta_rho_rel_max*1e3:.6f} m")
 
 # ============================================================================
 # SUMMARY OF ANSWERS
@@ -204,9 +204,9 @@ print("="*70)
 print(f"\n1. CLOCK OFFSET EFFECT:")
 print(f"   Range error = {Delta_rho_clock:.2g} km")
 print(f"\n2. LIGHT TIME (SAGNAC) EFFECT:")
-print(f"   Minimum effect = {Delta_rho_sagnac_min*1e6:.2g} m")
-print(f"   Maximum effect = {Delta_rho_sagnac_max*1e6:.2g} m")
+print(f"   Minimum effect = {Delta_rho_sagnac_min*1e3:.2g} m")
+print(f"   Maximum effect = {Delta_rho_sagnac_max*1e3:.2g} m")
 print(f"\n3. RELATIVISTIC EFFECT (ECCENTRICITY):")
 print(f"   Minimum effect = {Delta_rho_rel_min:.2g} m")
-print(f"   Maximum effect = {Delta_rho_rel_max*1e6:.2g} m")
+print(f"   Maximum effect = {Delta_rho_rel_max*1e3:.2g} m")
 print("="*70)
