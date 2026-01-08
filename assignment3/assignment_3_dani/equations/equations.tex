@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Equations}
+\author{}
+\date{}
+
+\begin{document}
+
+    \begin{equation*}
+        \mathbf{F} = \frac{\partial \mathbf{f}(t, \mathbf{x}(t), \mathbf{p})}{\partial \mathbf{x}(t)} = \begin{bmatrix}
+        \frac{\partial \mathbf{v}}{\partial \mathbf{r}} & \frac{\partial \mathbf{v}}{\partial \mathbf{v}} \\
+        \frac{\partial \mathbf{a}}{\partial \mathbf{r}} & \frac{\partial \mathbf{a}}{\partial \mathbf{v}}
+        \end{bmatrix} = \begin{bmatrix}
+        \mathbf{0}_{3\times 3} & \mathbf{I}_{3\times 3} \\
+        \frac{\partial \mathbf{a}}{\partial \mathbf{r}} & \frac{\partial \mathbf{a}}{\partial \mathbf{v}}
+        \end{bmatrix}
+    \end{equation*}
+
+    \begin{equation*}
+        \mathbf{a} = \mathbf{a}_{\text{grav}} + \mathbf{a}_{\text{rot}} = -\frac{\mu}{r^{3}}\mathbf{r} - \boldsymbol{\Omega}^2 \mathbf{r} - 2 \boldsymbol{\Omega}\mathbf{v}
+    \end{equation*}
+
+    \begin{equation*}
+        \mathbf{F} = \begin{bmatrix}
+        \mathbf{0}_{3\times 3} & \mathbf{I}_{3\times 3} \\
+        \frac{\mu}{r^5}(3\mathbf{r}\mathbf{r}^{T} - r^2 \mathbf{I}_{3\times 3}) - \boldsymbol{\Omega}^2 & -2 \boldsymbol{\Omega}
+        \end{bmatrix}
+    \end{equation*}
+
+    \begin{equation*}
+        \boldsymbol{\Omega} = \begin{bmatrix}
+        0 & -\omega_E & 0 \\
+        \omega_E & 0 & 0 \\
+        \end{bmatrix}
+    \end{equation*}
+
+    \begin{equation*}
+        \boldsymbol{\Phi}(t_k,t_k) = \frac{\partial \mathbf{x}(t_k)}{\partial \mathbf{x}(t_k)} = \mathbf{I}_{6\times 6}
+    \end{equation*}
+
+\end{document}
